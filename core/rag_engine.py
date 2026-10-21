@@ -7,9 +7,11 @@ from core.vector_store import build_vector_store, load_vector_store, get_retriev
 
 def get_llm():
     return ChatMistralAI(
-        model="mistral-small-latest",
+        model="mistral-small-2603",
         mistral_api_key=os.getenv("MISTRAL_API_KEY"),
         temperature=0.3,
+        max_retries=5,
+        timeout=120,
     )
 
 def format_docs(docs):
