@@ -12,11 +12,12 @@ ffmpeg-python>=0.2.0
 requests>=2.32.0
 deep-translator>=1.11.4
 
-# LangChain and Mistral
+# LangChain 
 langchain>=0.2.0
 langchain-core>=0.2.0
 langchain-community>=0.2.0
 langchain-openai
+langchain-text-splitters
 
 # RAG and embeddings
 langchain-chroma
@@ -25,6 +26,7 @@ sentence-transformers>=3.0.0
 langchain-huggingface>=0.0.3
 huggingface-hub>=0.23.0
 tiktoken>=0.7.0
+
 
 # Export and utilities
 reportlab>=4.2.0
