@@ -1,18 +1,9 @@
 import os
-from langchain_mistralai import ChatMistralAI
+from core.llm_client import get_llm
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from core.vector_store import build_vector_store, load_vector_store, get_retriever
-
-def get_llm():
-    return ChatMistralAI(
-        model="mistral-small-2603",
-        mistral_api_key=os.getenv("MISTRAL_API_KEY"),
-        temperature=0.3,
-        max_retries=5,
-        timeout=120,
-    )
 
 def format_docs(docs):
     return "\n\n".join([doc.page_content for doc in docs])
