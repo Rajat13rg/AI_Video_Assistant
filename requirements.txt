@@ -1,40 +1,35 @@
-# AI Video Assistant dependencies
-
-# Streamlit application
+# Streamlit interface
 streamlit>=1.35.0
 streamlit-extras>=0.4.0
 watchdog>=4.0.0
 
-# YouTube and audio processing
-yt-dlp
+# Audio and video handling
+yt-dlp[default]>=2024.4.9
 pydub>=0.25.1
 ffmpeg-python>=0.2.0
-openai-whisper
-torch
-torchaudio
 
-# Transcription and translation
+# Hosted transcription and translation
+requests>=2.32.0
 deep-translator>=1.11.4
 
 # LangChain and Mistral
-langchain
-langchain-core
-langchain-community
-langchain-mistralai
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-mistralai>=0.1.0
+mistralai>=0.4.0
+
+# RAG and embeddings
 langchain-chroma
-mistralai
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+langchain-huggingface>=0.0.3
+huggingface-hub>=0.23.0
+tiktoken>=0.7.0
 
-# RAG, embeddings and vector storage
-chromadb
-sentence-transformers
-langchain-huggingface
-huggingface-hub
-tiktoken
-
-# Export and utility packages
+# Export and utilities
 reportlab>=4.2.0
 fpdf2>=2.7.9
 python-dotenv>=1.0.0
-numpy
+numpy>=1.26.0
 tqdm>=4.66.0
-requests>=2.32.0
